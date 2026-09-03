@@ -1,17 +1,20 @@
 class Solution:
     def interpret(self, command: str) -> str:
-        i=0
-        output=""
-        while i<len(command):
-            if command[i]=='G':
-                output+='G'
+        s=""
+        for i in range(len(command)):
+            if command[i]=="G":
+                s+="G"
                 i+=1
-            elif command[i]=='(':
-                if command[i+1]==')':
-                    output+='o'
+            elif command[i]=="(":
+                if command[i+1]==")":
+                    s+="o"
                     i+=2
                 else:
-                    output+='al'
+                    s+="al"
                     i+=4
-        return output
+        return s
+
+                
+
+
         
